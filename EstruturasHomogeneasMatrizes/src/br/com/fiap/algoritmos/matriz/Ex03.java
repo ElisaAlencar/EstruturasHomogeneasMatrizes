@@ -3,20 +3,23 @@ package br.com.fiap.algoritmos.matriz;
 import java.text.NumberFormat;
 import java.util.Scanner;
 
+
+//ADICIONANDO UM LINHA PELA INTERNET
+
 /*
  * 
- * FaÁa um programa que preencha:
+ * Fa√ßa um programa que preencha:
  * 
  * a. Um vetor com nomes de cinco produtos;
- * b. Uma matriz 5X4 com os preÁos dos cinco produtos em quatro lojas diferentes;
+ * b. Uma matriz 5X4 com os pre√ßos dos cinco produtos em quatro lojas diferentes;
  * c. Outro vetor com o custo do transporte dos cinco produtos.
  * 
- * O programa dever· preencher uma segunda matriz 5X4 com os valores dos impostos 
+ * O programa dever√° preencher uma segunda matriz 5X4 com os valores dos impostos 
  * de cada produto, de acordo com a tabela a seguir.
  * 
- * O programa dever· mostrar ainda um relatÛrio com o nome do produto, o n˙mero da loja onde o 
- * produto È encontrado, o valor do imposto a pagar, o custo de transporte, 
- * o preÁo e o preÁo final (acrescido do valor do imposto e do custo do transporte).
+ * O programa dever√° mostrar ainda um relat√≥rio com o nome do produto, o n√∫mero da loja onde o 
+ * produto √© encontrado, o valor do imposto a pagar, o custo de transporte, 
+ * o pre√ßo e o pre√ßo final (acrescido do valor do imposto e do custo do transporte).
  * 
  */
 
@@ -40,7 +43,7 @@ public class Exercicio3 {
 		// CARREGA OS PRECOS DE CADA PRODUTO CADA LOJA
 		for (int produtos = 0; produtos < precosProdutosLojas.length ; produtos++) {
 			for (int lojas = 0; lojas < precosProdutosLojas[produtos].length; lojas++) {
-				System.out.println("Insira o preÁo do produto [" + nomesProdutos[produtos] + "] referente a loja [" + (lojas+1) + "]:");
+				System.out.println("Insira o pre√ßo do produto [" + nomesProdutos[produtos] + "] referente a loja [" + (lojas+1) + "]:");
 				precosProdutosLojas[produtos][lojas] = entrada.nextDouble();
 				
 				// CARREGA OS IMPOSTOS DE CADA PRODUTO EM TODAS AS LOJAS
@@ -64,18 +67,18 @@ public class Exercicio3 {
 		NumberFormat nfMoeda = NumberFormat.getCurrencyInstance();
 		nfMoeda.setMaximumFractionDigits(2);
 		
-		// EXIBE RELAT”RIO FINAL CONTENDO O NOME DO PRODUTO, N⁄MERO DA LOJA, VALOR DO IMPOSTO ¿ PAGAR
-		// CUSTO DE TRANSPORTE, PRE«O E PRE«O FINAL (ACRESCIDO DO VALOR DO IMPOSTO E DO CUSTO DO TRANSPORTE)
-		System.out.println("RelatÛrio Final de Produtos:\n");
+		// EXIBE RELAT√ìRIO FINAL CONTENDO O NOME DO PRODUTO, N√öMERO DA LOJA, VALOR DO IMPOSTO √Ä PAGAR
+		// CUSTO DE TRANSPORTE, PRE√áO E PRE√áO FINAL (ACRESCIDO DO VALOR DO IMPOSTO E DO CUSTO DO TRANSPORTE)
+		System.out.println("Relat√≥rio Final de Produtos:\n");
 		for (int produtos = 0; produtos < precosProdutosLojas.length ; produtos++) {
 
 			System.out.println("\n\tDados do Produto: " + nomesProdutos[produtos]);
 			for (int lojas = 0; lojas < precosProdutosLojas[produtos].length; lojas++) {
-				System.out.println("\t\t\tDados da Loja N˙mero: " + (lojas+1) + 
-						           "\n\t\t\tValor do Imposto ‡ Pagar: " + nfMoeda.format(valoresImpostos[produtos][lojas] * precosProdutosLojas[produtos][lojas]) +
+				System.out.println("\t\t\tDados da Loja N√∫mero: " + (lojas+1) + 
+						           "\n\t\t\tValor do Imposto √† Pagar: " + nfMoeda.format(valoresImpostos[produtos][lojas] * precosProdutosLojas[produtos][lojas]) +
 						           "\n\t\t\tCusto de Transporte: " + nfMoeda.format(custosTransportesProdutos[produtos]) + 
-						           "\n\t\t\tPreÁo do Produto: " + nfMoeda.format(precosProdutosLojas[produtos][lojas]) +
-						           "\n\t\t\tPreÁo Final: " + nfMoeda.format(precosProdutosLojas[produtos][lojas] 
+						           "\n\t\t\tPre√ßo do Produto: " + nfMoeda.format(precosProdutosLojas[produtos][lojas]) +
+						           "\n\t\t\tPre√ßo Final: " + nfMoeda.format(precosProdutosLojas[produtos][lojas] 
 						        		                                   + ((precosProdutosLojas[produtos][lojas] * valoresImpostos[produtos][lojas])) 
 						        		                                   + custosTransportesProdutos[produtos]));
 				System.out.println("------------------------------------------------------------");
